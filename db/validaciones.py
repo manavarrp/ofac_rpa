@@ -41,7 +41,7 @@ def validate_database_structure():
             for col in columnas:
                 print(f"   - {col[0]} ({col[1]})")
 
-        print("\nValidación finalizada correctamente")
+        print("\nValidación finalizada correctamente de tablas y columnas.")
 
     except Exception as e:
         print("Error validando estructura:", e)

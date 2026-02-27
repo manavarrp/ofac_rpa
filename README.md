@@ -19,22 +19,21 @@ driver_path = r"C:\seleniumdriver\msedgedriver.exe"
 ## Estructura del proyecto
 
 project_root/
-├── bot/
-│   ├── bot_ofac.py          # Inicio del driver y funciones de búsqueda
-│   ├── proceso_ofac.py      # Procesamiento de registros y screenshots
-│   └── screenshot.py        # Función guardar_screenshot
-├── db/
-│   ├── conexion.py          # Conexión a PostgreSQL
-│   ├── consultas.py         # Consultas SQL
-│   └── validaciones.py      # Validaciones de datos
-├── utils/
-│   ├── util.py              # Funciones utilitarias
-│   └── export_excel.py      # Función exportar Excel de incompletos
-├── reports/                 # Carpeta donde se generan los reportes Excel
-├── screenshots/             # Carpeta donde se guardan las capturas
-├── main.py                  # Script principal de ejecución
-└── .env                     # Variables de entorno (URL de la base de datos)
-
+  ├── bot/
+  │   ├── bot_ofac.py          # Inicio del driver y funciones de búsqueda
+  │   ├── proceso_ofac.py      # Procesamiento de registros y screenshots
+  │   └── screenshot.py        # Función guardar_screenshot
+  ├── db/
+  │   ├── conexion.py          # Conexión a PostgreSQL
+  │   ├── consultas.py         # Consultas SQL
+  │   └── validaciones.py      # Validaciones de datos
+  ├── utils/
+  │   ├── util.py              # Funciones utilitarias
+  │   └── export_excel.py      # Función exportar Excel de incompletos
+  ├── reports/                 # Carpeta donde se generan los reportes Excel
+  ├── screenshots/             # Carpeta donde se guardan las capturas
+  ├── main.py                  # Script principal de ejecución
+  └── .env                     # Variables de entorno (URL de la base de datos)
 ## Configuración
 
 1. Crear un archivo `.env` en la raíz del proyecto.

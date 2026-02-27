@@ -37,7 +37,7 @@ if __name__ == "__main__":
     export_incomplete_results_excel() 
 
     # Paso 9: Limpiar resultados para próximas pruebas
-    delete_results()
+    # delete_results()
 
    
    

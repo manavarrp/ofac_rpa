@@ -1,7 +1,7 @@
 from db.conexion import get_db_connection
 from db.validaciones import validate_database_structure
 from db.consultas import get_persons, get_results, delete_results
-from bot.proceso_ofac import separar_registros_masivos, insertar_masivos
+from bot.proceso_ofac import split_bulk_records, insert_bulk_records, process_complete_records_ofac
 
 
 def test_db_connection():
@@ -21,14 +21,22 @@ if __name__ == "__main__":
     persons = get_persons()
 
     # Paso 5: separar registros masivos
-    masivo, completos = separar_registros_masivos(persons)
+    masivo, completos = split_bulk_records(persons)
 
     # Paso 5: Insertar resultados masivos
-    insertar_masivos(masivo) 
+    insert_bulk_records(masivo) 
 
+    # Paso 6: Procesar registros completos en OFAC
+    process_complete_records_ofac(completos)
+
+    # Paso 7: Obtener resultados finales
     get_results()
 
-    #delete_results()
+    # Paso 8: Limpiar resultados para próximas pruebas
+    delete_results()
+
+   
+   
 
  
 

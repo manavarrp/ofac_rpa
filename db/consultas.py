@@ -7,7 +7,7 @@ def get_persons():
     try: 
         conn = get_db_connection()
         cursor = conn.cursor()
-        
+        # Consulta SQL para obtener personas con su dirección y país (si existen)
         query = """
             SELECT
                 p."idPersona",

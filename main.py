@@ -5,12 +5,6 @@ from bot.proceso_ofac import split_bulk_records, insert_bulk_records, process_co
 from utils.export_excel import export_incomplete_results_excel
 
 
-def test_db_connection():
-    conn = get_db_connection()
-    print("Conexión exitosa a la base de datos")
-    conn.close()
-
-
 if __name__ == "__main__":
      # Paso 1: test conexión
      #test_db_connection()

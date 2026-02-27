@@ -23,7 +23,7 @@ def get_persons():
         cursor.execute(query)
         results = cursor.fetchall()
 
-        print("\nDatos obtenidos de la base de datos:")
+        print("\nDatos obtenidos de la tabla Personas:")
         for row in results:
             print(row)
 
@@ -56,7 +56,7 @@ def get_results():
         cursor.execute(query)
         results = cursor.fetchall()
 
-        print("\nDatos obtenidos de la base de datos:")
+        print("\nDatos obtenidos de Resultadosuser4105:")
         for row in results:
             print(row)
 

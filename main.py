@@ -25,7 +25,7 @@ if __name__ == "__main__":
     process_complete_records_ofac(completos)
 
     # Paso 7: Obtener resultados finales
-    get_results()
+    # get_results()
 
     # Paso 8: Exportar resultados con información incompleta a Excel
     export_incomplete_results_excel() 

@@ -2,6 +2,7 @@ from db.conexion import get_db_connection
 from db.validaciones import validate_database_structure
 from db.consultas import get_persons, get_results, delete_results
 from bot.proceso_ofac import split_bulk_records, insert_bulk_records, process_complete_records_ofac
+from utils.export_excel import export_incomplete_results_excel
 
 
 def test_db_connection():
@@ -32,7 +33,10 @@ if __name__ == "__main__":
     # Paso 7: Obtener resultados finales
     get_results()
 
-    # Paso 8: Limpiar resultados para próximas pruebas
+    # Paso 8: Exportar resultados con información incompleta a Excel
+    export_incomplete_results_excel() 
+
+    # Paso 9: Limpiar resultados para próximas pruebas
     delete_results()
 
    
